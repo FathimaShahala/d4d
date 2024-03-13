@@ -1,8 +1,9 @@
 import 'package:d4d/utils/app_images.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
+// ignore: must_be_immutable
 class RecentProduct extends StatelessWidget {
+   RecentProduct({super.key});
   List productListImage = [
     AppImages.image5,
     AppImages.image6,
@@ -48,7 +49,6 @@ class RecentProduct extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
     return SizedBox(
       child: GridView.builder(
         primary: false,

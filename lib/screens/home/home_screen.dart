@@ -1,4 +1,3 @@
-import 'package:d4d/screens/home/widgets/category.dart';
 import 'package:d4d/screens/home/widgets/custom_app_bar.dart';
 import 'package:d4d/screens/home/widgets/custom_search_bar.dart';
 import 'package:flutter/material.dart';
@@ -21,18 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ListView(
             children: [
               CustomAppBar(),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5,),
               const CustomSearchBar(),
-              const SizedBox(
-                height: 2,
-              ),
-              //RecentProducts(),
+              const SizedBox(height: 2,),
             ],
           ),
-          // ),
-        ),
+           ),
       ),
       drawer: const Drawer(),
     );
