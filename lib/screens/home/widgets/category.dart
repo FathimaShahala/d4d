@@ -50,13 +50,13 @@ class _CategoryState extends State<Category> {
                             height: 32,
                             decoration: BoxDecoration(
                               color:
-                                  current == index ? Colors.limeAccent : Colors.white,
+                                  current == index ? Color(0xffd9c300) : Colors.white,
                               borderRadius: current == index
                                   ? BorderRadius.circular(30)
                                   : BorderRadius.circular(30),
                               border: current == index
-                                  ? Border.all(color: Colors.limeAccent, width: 1)
-                                  : Border.all(color: Color.fromARGB(255, 193, 204, 65), width: 1),
+                                  ? Border.all(color: Color(0xffd9c300), width: 1)
+                                  : Border.all(color: Color(0xffd9c300), width: 1),
                             ),
                             child: Center(
                               child: Column(

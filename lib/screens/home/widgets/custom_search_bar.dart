@@ -69,7 +69,7 @@ class CustomSearchBar extends StatelessWidget {
             height: 45,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.lime,
+              border: Border.all(color: Color(0xffd9c300),
               width: 1
               )
             ),
