@@ -1,3 +1,4 @@
+import 'package:d4d/utils/app_colors.dart';
 import 'package:d4d/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
@@ -50,13 +51,13 @@ class _CategoryState extends State<Category> {
                             height: 32,
                             decoration: BoxDecoration(
                               color:
-                                  current == index ? Color(0xffd9c300) : Colors.white,
+                                  current == index ? AppColors.yellowColor : AppColors.whiteColor,
                               borderRadius: current == index
                                   ? BorderRadius.circular(30)
                                   : BorderRadius.circular(30),
                               border: current == index
-                                  ? Border.all(color: Color(0xffd9c300), width: 1)
-                                  : Border.all(color: Color(0xffd9c300), width: 1),
+                                  ? Border.all(color: AppColors.yellowColor, width: 1)
+                                  : Border.all(color: AppColors.yellowColor, width: 1),
                             ),
                             child: Center(
                               child: Column(
@@ -68,8 +69,8 @@ class _CategoryState extends State<Category> {
                                       fontSize: 10,
                                       fontWeight: FontWeight.w500,
                                       color: current == index
-                                          ? Colors.white
-                                          : Colors.limeAccent,
+                                          ? AppColors.whiteColor
+                                          : AppColors.yellowColor,
                                     ),
                                   ),
                                 ],

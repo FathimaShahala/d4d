@@ -1,3 +1,4 @@
+import 'package:d4d/utils/app_colors.dart';
 import 'package:d4d/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
             children: [
               CircleAvatar(
                 radius: 25,
-                backgroundColor: Colors.grey.shade300,
+                backgroundColor: AppColors.grey3Color,
                 child: SizedBox(
                   width: 45,
                   height: 45,
@@ -64,16 +65,16 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: Colors.orange,
+                    color: AppColors.orangeColor,
                     width: 1.0,
                   ),
                 ),
                 child: const CircleAvatar(
                   radius: 13,
-                  backgroundColor: Colors.white,
+                  backgroundColor: AppColors.whiteColor,
                   child: CircleAvatar(
                     radius: 8,
-                    backgroundColor: Colors.white,
+                    backgroundColor: AppColors.whiteColor,
                     backgroundImage: AssetImage(AppImages.heart),
                   ),
                 ),

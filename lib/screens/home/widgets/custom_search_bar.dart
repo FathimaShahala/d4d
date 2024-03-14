@@ -1,5 +1,6 @@
 import 'package:d4d/screens/home/widgets/category.dart';
 import 'package:d4d/screens/home/widgets/products.dart';
+import 'package:d4d/utils/app_colors.dart';
 import 'package:d4d/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
@@ -19,10 +20,10 @@ class CustomSearchBar extends StatelessWidget {
                     width: 319,
                     height: 54,
                 decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
+                    color: AppColors.grey1Color,
                     borderRadius: BorderRadius.circular(8),
-                    boxShadow: [
-                      BoxShadow(color: Colors.grey.shade50, blurRadius: 4)
+                    boxShadow: const [
+                      BoxShadow(color: AppColors.grey50Color, blurRadius: 4)
                     ]),
                 child: TextField(
                   decoration: InputDecoration(
@@ -35,7 +36,7 @@ class CustomSearchBar extends StatelessWidget {
                     ),
                     hintText: 'Search it here...',
                     hintStyle:
-                        const TextStyle(color: Colors.grey, fontSize: 15),
+                        const TextStyle(color: AppColors.greyColor, fontSize: 15),
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Image.asset(
@@ -52,7 +53,7 @@ class CustomSearchBar extends StatelessWidget {
                 width: 56,
                 height: 54,
                 decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
+                    color: AppColors.grey1Color,
                     borderRadius: BorderRadius.circular(8)),
                 child: Image.asset(
                   AppImages.profile,
@@ -69,7 +70,7 @@ class CustomSearchBar extends StatelessWidget {
             height: 45,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Color(0xffd9c300),
+              border: Border.all(color: AppColors.yellowColor,
               width: 1
               )
             ),

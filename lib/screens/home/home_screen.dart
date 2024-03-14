@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
               CustomAppBar(),
               const SizedBox(height: 5,),
               const CustomSearchBar(),
-              const SizedBox(height: 2,),
+              //const SizedBox(height: 2,),
             ],
           ),
            ),

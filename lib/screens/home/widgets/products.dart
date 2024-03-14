@@ -1,4 +1,5 @@
 import 'package:d4d/utils/app_images.dart';
+import 'package:d4d/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -58,7 +59,7 @@ class RecentProduct extends StatelessWidget {
         scrollDirection: Axis.vertical,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.44,
+          childAspectRatio: 0.49,
         ),
         itemBuilder: (context, index) {
           return InkWell(
@@ -101,13 +102,14 @@ class RecentProduct extends StatelessWidget {
                             //const SizedBox(height: 12),
                             Text(
                               productListName[index],
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold
-                              ),
+                              style: TextStyles.title
+                              //(
+                                //fontWeight: FontWeight.bold
+                              //),
                             ),
                             Text(
                               productListDisc[index],
-                              style: const TextStyle(color: Colors.grey),
+                              style: TextStyles.subtitle,
                             ),
                           ],
                         ),

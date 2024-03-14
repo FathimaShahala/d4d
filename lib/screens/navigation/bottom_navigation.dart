@@ -24,24 +24,28 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double displayWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: buildscreens[_selectedIndex],
       bottomNavigationBar: 
         Container(
-          height: 97,
-          width: 441,
+          margin: EdgeInsets.all(displayWidth * .001),
+          height: displayWidth * .190,
+          //height: 97,
+          //width: 441,
           decoration: const BoxDecoration(
             color: Colors.white,
             boxShadow: [
               BoxShadow(
                 color: Colors.grey,
                 offset: Offset(0, -1),
-                blurRadius: 1,
+                blurRadius: 20,
               ),
             ],
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(0),
-              topRight: Radius.circular(0),
+              topLeft: Radius.circular(1),
+              topRight: Radius.circular(1),
             ),
           ),
           child: ListView.builder(
@@ -55,27 +59,24 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
                 });
               },
               child: Container(
-                padding: const EdgeInsets.all(25),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      listOfimages[index],        
-                      color: index == _selectedIndex
-                      ? Colors.grey
-                      : Colors.black,
+                    padding: const EdgeInsets.all(13),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const SizedBox(width: 19,),
+                            Column(
+                              children: [
+                                Image.asset(listOfimages[index]),
+                                Text(listofnames[index]),
+                              ],
+                            ),
+                            
+                            
+                            
+                      ],
                     ),
-                    Text(
-                      listofnames[index],
-                      style: TextStyle(
-                        color: index == _selectedIndex
-                        ? Colors.grey
-                        : Colors.black,
-                      ),
-                    ),
-                  ],
-                ),   
-              ),
+                  ),
             ),    
           ),      
         ),
