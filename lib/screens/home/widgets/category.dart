@@ -82,23 +82,34 @@ class _CategoryState extends State<Category> {
                     );
                   }),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              //padding: const EdgeInsets.all(4),
-              child: Row(
-                children: [
-                  for(int i=0;i<5;i++)
-                  SizedBox(
-                    width: 83,
-                    height: 81,
-                    child: Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: Image.asset(imageList[i]),
-                      )
-                  )
-                  ],
-              ),
-            ),
+            
+               
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  //padding: const EdgeInsets.all(4),
+                  child: Row(
+                    children: [
+                       Image.asset(AppImages.leftArrow),
+                      Row(
+                        children: [
+                          for(int i=0;i<5;i++)
+                          SizedBox(
+                            width: 83,
+                            height: 81,
+                            child: Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Image.asset(imageList[i]),
+                              )
+                          )
+                          ],
+                      ),
+                       Image.asset(AppImages.rightArrow)
+                    ],
+                  ),
+                ),
+               
+              
+            
           ],
     );
   }
